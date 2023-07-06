@@ -1,0 +1,10 @@
+//http (does not require duplex.)
+create-user
+delete-user
+
+//requires duplex communiction
+send-message
+join-room
+exit-room
+create-room (if room is created with other users)
+disconnect
