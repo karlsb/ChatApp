@@ -1,12 +1,7 @@
 import "../../index.css"
 import {useJoinChatRoom} from "../../hooks/useJoinChatRoom"
-/* 
-    - chatroom name
-    - button to join
-    - button to leave
-    - butotn to display this chatroom in the message area.
-*/
-export function ChatRoom(props) {
+
+export function Room(props) {
     const {roomName, openRoom, username} = props
     const [joinRoom, leaveRoom] = useJoinChatRoom(username)
 

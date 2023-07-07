@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { socket } from "../utils/socket";
 import { VERBOSE } from "../utils/constants";
 
+
+/* Server communcation for sending message to a chatroom. */
+
 export const useMessages = () => {
     const [messages, setMessages] = useState(['Welcome!'])
 

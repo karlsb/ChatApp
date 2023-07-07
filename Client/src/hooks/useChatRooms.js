@@ -1,7 +1,6 @@
 
 
-/* Create new and recieve existing chatrooms from the server */
-
+/* Server communication for creating new and recieve existing chatrooms */
 
 import { useEffect, useState } from "react";
 import { socket } from "../utils/socket";

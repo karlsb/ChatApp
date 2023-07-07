@@ -1,7 +1,7 @@
 
 
 
-/* open and close the chatroom view */
+/* Server communication for opening and closing a chatroom */
 
 import { useState } from 'react'
 import { socket } from '../utils/socket'

@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import Modal from '../modal/Modal'
-import { ChatRoom }  from './ChatRoom'
+import { Room }  from './Room'
 import '../../index.css'
 /*  where do we store all the chatrooms?  
     - every chatroom displayed must be chatrooms that the user has joined. so we need a list of chatrooms that belongs to a user.
     - where in the app do we need this data? 
 */
 
-export default function ChatList({openRoom, user, chatRooms, createChatRoom}) {
+export default function RoomList({openRoom, user, chatRooms, createChatRoom}) {
   const [show, setShow] = useState(false)
 
   function openCreateRoomModal(){
@@ -33,7 +33,7 @@ export default function ChatList({openRoom, user, chatRooms, createChatRoom}) {
           </div>
       <div>
         <h2 className="font-bold text-lg pb-2 border-b-2 ml-2">My Rooms</h2>
-        {chatRooms.map((roomName, index) => <ChatRoom key={index} roomName={roomName} openRoom ={openRoom} username={user.username}></ChatRoom>)}
+        {chatRooms.map((roomName, index) => <Room key={index} roomName={roomName} openRoom ={openRoom} username={user.username}></Room>)}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-/* join and leave a chatroom so that you can participate in communcation */
+/* Server communication to handle a client joining and leaving a chatroom */
 
 import {socket} from '../utils/socket'
 

@@ -54,8 +54,6 @@ io.on('connection', (socket) => {
         CALLBACK API
     
     --------------------*/
-    //TODO: add delete room listener.
-    //TODO: add invite user listener? - later stage of app.
 
     socket.on('create user callback', (username, onComplete) => {
         if(addUser(socket.id, username)){
@@ -65,7 +63,7 @@ io.on('connection', (socket) => {
             onComplete("user already exists")
         }
     })
-    //TODO: better error handling, maybe codes etc.
+
     socket.on('create room callback', ({username,roomName}, onComplete) => {
         if(createChatRoom(roomName, username)){
             socket.join(roomName)

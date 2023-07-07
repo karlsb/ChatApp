@@ -1,7 +1,13 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
+
+
+
+
+/*  
+    Modal to create a new chatroom.
+*/
 
 export default function Modal({show, setShow, onCreateChatRoom}) {
-    //this should probably be broken out, cus we want to set show on in parent components.
     const [userInput, setUserInput] = useState('')
     
     function updateUserInput(e){

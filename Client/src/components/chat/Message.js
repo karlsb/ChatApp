@@ -3,7 +3,6 @@ import { UserContext } from '../../App'
 import '../../index.css'
 
 export default function Message({message}) {
-  /* TODO: this looks very weird. Do i really need to put the user context inside a message renderer?*/
   const user = useContext(UserContext)
 
   if(message.user === user.username){

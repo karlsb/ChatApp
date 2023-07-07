@@ -1,6 +1,13 @@
 import React from 'react'
 import '../../index.css'
 
+
+
+
+/* 
+  Not implemented yet.
+*/
+
 export default function OnlineList() {
   return (
     <div className="bg-gray-50 w-56 flex">

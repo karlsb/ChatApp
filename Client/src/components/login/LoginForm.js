@@ -1,6 +1,8 @@
-import {socket} from '../../utils/socket'
+import { socket } from '../../utils/socket'
 import { useState } from 'react';
 
+
+/* Custom hook */
 
 const useLoginView = (setUser, LogIn) => {
   const [headingText, setHeadingText] = useState('Login')

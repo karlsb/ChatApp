@@ -10,12 +10,9 @@ function Chat({chatName, sendMessage}) {
     return (
         <div className="bg-white flex-auto">
             <div className="flex flex-col h-full">
-                
-                {/* TODO: could be wrapped in a container so that all 3 are in the same component */}
                 <div className="h-20 border-b flex items-center"> 
                     <h1 className="pl-10 text-3xl font-bold leading-tight tracking-tight">{chatName}</h1>
                 </div>
-
                 <MessageBox messages={messages}></MessageBox> 
                 <MessageInputForm sendMessage={sendMessage} chatName={chatName}/>
             </div>
