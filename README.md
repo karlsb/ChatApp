@@ -129,12 +129,18 @@ if a user is not logged in the view is: Login
 App contain UserContext and MessageContext, so that components throughout the application can access the context data.
 App also holds a set of hooks that handles the server commnication. It sends the hook functions down to child components based on needs.
 
-Data from hooks
-- chatRooms
-- user
-- messages
-- loggedIn
-- openChatRoom 
+Hooks used in Compenent
+- useMessages
+- useChatRooms
+- useOpenChatRoom
+- useState - [loggedIn, setLoggedIn]
+- useState - [user, setUser]
+
+useState - [user, setUser] provides user data the UserContext so that other components can know what user is logged in.
+
+useState - [loggedIn, setLoggedIn] handles what view App should render.
+
+For information about custom hooks see the [hooks section](# Hooks and server communication)
 
 #### Chat
 

@@ -22,7 +22,6 @@ function App() {
   const [chatRooms, createChatRoom, getAllChatRooms] = useChatRooms()
   const [openChatRoom, openRoom] = useOpenChatRoom(setMessages)
 
-  /* maybe this can be done cleaner? */
   /* TODO: set some flags for logging, i dont want it in production. */
   function LogIn(newUser){
     setLoggedIn(true)
