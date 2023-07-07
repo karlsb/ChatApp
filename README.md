@@ -67,7 +67,7 @@ if you ran npm audit fix --force you might have broken some dependencies, so the
 
 to see if the weaknesses are only in devDependencies run:
 ```bash
-npm audit -production
+npm audit --omit=dev
 ```
 configure the file run.sh to contain the correct path to the project (see instructions in run.sh)
 
