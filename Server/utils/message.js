@@ -1,8 +1,6 @@
-import moment from 'moment'
 
 /* array of messages related to each chatroom */
 export const messages = {}
-    /* roomName: [...{sender: message}] */
 
 
 export function clearMessages(){
@@ -11,12 +9,10 @@ export function clearMessages(){
     }
 }
 
-
 export function createMessage(user, msg){
     return {
         user: user,
         message: msg,
-        /* time: moment().format('h:mm a') */
     }
 }
 
@@ -25,7 +21,7 @@ export function getRoomMessages(roomName){
         console.log(`getRoomMessages: ${roomName} is not a member of 'messages' in back-end/messages.js`)
         return
     }
-    return messages[roomName] // should be an array
+    return messages[roomName] 
 }
 
 export function addRoomInMessages(roomName){

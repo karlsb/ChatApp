@@ -1,7 +1,6 @@
 import { getUserById, addRoomInUsers, userExists, removeRoomInUser } from "./users.js"
 import { addRoomInMessages, messages } from "./message.js"
 import { VERBOSE } from "../config.js"
- //this should probably be a key value structure, so an object is better.
 
 
 /* an interesting bug is that if we add a room that is
@@ -63,7 +62,6 @@ export function userIsInRoom(username, roomName){
 }
 
 
-// this should probably wrap socket.join otherwise we need to do two checks for if
 // the user is in the room.
 export function userJoinRoom(username, roomName){
     if(!userExists(username)){

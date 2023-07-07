@@ -43,17 +43,18 @@ Start the app by executing run.sh (you may have to use chmod +x on the run.sh fi
 ./run.sh
 ```
 
-# Detailed Description Of The Application
+# Description Of The Application
 
 ## API
 
 The API is build with Node.js and uses the tools express.js and socket.io
 
-express is used to run a web server while i use socket io to define socket communication methods.
+Express is used as a web server and socket.io to provide socket communication through the express server.
+all communication betweem client and server in the application is done through a socket connection.
 
-behind the API is a simple data storage written in javascript.
+Behind the API is a simple custom in memory data storage written in javascript.
 
-### Methods
+### Socket Events
 
 - login
 - create user
@@ -69,15 +70,28 @@ behind the API is a simple data storage written in javascript.
 *The naming convention "___ callback" was developed due to two different styles of methods where one used a callback from the caller, and one did not. 
 later most of the non-callback methods where depricated and removed.*
 
-## Data storage
-- I use simple in memory data on the server. 
--   chatRooms and messages are stored in Key-value data-structures, e.i objects.
--   Users are stored in an array.
--   I made a few custom methods to insert, get, delete for each data storage. 
+### Data storage
 
-- Next time i build something similar i would want to use a typed language, because a lot of time was spend on debugging for correct types.
+A simple in memory data on the server. 
+
+*data models*
+
+although the data is not technically typed, i have written it with the
+following typing in mind.
+
+chatRooms - ```{ roomName: { owner, members }} : { string: { string, []string }}```
+ 
+users - ```[{ id, username, rooms }] : []{ string, string, []string }```
+
+messages - ```{ roomName: [] } : { string: []string }```
+
+- Methods to insert, get, delete exists for each data model. 
+
 ## Client
-The client is built with React.js and create-react-app. 
+
+The client is built with React.js and create-react-app. Below is a description for eact component and all hooks used for client server communication.
+
+I primarily uses custom hooks to handle socket communication with a few exceptions.
 
 ### Components
 - **[App](#App)**

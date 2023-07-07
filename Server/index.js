@@ -4,9 +4,9 @@ import express from 'express'
 import http from 'http'
 import { Server } from "socket.io"
 //utils
-import {createMessage, getRoomMessages, addRoomInMessages, addMessages} from './utils/message.js'
-import {leaveChatRoom, getRoom, chatRooms,  createChatRoom, userIsInRoom, userJoinRoom, getChatRooms, chatRoomExist, isChatRoomsEmpty, joinChatRoom} from './utils/chatRooms.js'
-import { addUser, getUserById ,userExists, addRoomInUsers, getUserRooms, findUser} from './utils/users.js';
+import {createMessage, getRoomMessages, addMessages} from './utils/message.js'
+import {leaveChatRoom, getRoom, createChatRoom, getChatRooms, joinChatRoom} from './utils/chatRooms.js'
+import { addUser, userExists, getUserRooms, findUser} from './utils/users.js';
 
 
 const app = express()

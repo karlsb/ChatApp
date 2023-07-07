@@ -1,38 +1,15 @@
 
 
-/* 
-    this acts as a simplified database
-    should implement with a real db at some point.
-
-    if we want to use SQL we could have the data fields:
-    uid, username, roomId
-
-    which we could then normalize to:
-   
-    key =  uid
-    uid username
-   
-    key = id // since a user can belong to many rooms.
-    id, uid, roomId
-
-    we let roomId be a string for now so that we cannot have duplicate room names.
-    
-*/
 
 
-/*  id:socket.id, username:kalle ,roomId:chat-room-id */
-export const users = [
-
-]
-
+/*  id:socket.id, username:namestring ,roomId:chat-room-id */
+export const users = []
 
 export function clearUsers(){
   users.length = 0
 
 }
 
-// here we link a socket id to a username and maybe rooms array 
-//TODO: change code that breaks because of change in return value
 export function addUser(id, username){
   if(!userExists(username)){
     const user = {id, username, rooms: []}
