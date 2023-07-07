@@ -140,7 +140,7 @@ useState - [user, setUser] provides user data the UserContext so that other comp
 
 useState - [loggedIn, setLoggedIn] handles what view App should render.
 
-For information about custom hooks see the [hooks section](# Hooks and server communication)
+For information about custom hooks see the [hooks section](#Hooks and server communication)
 
 #### Chat
 
@@ -161,7 +161,7 @@ The Chat component uses MessageContext provided by the App component. MessageCon
 
 MessageInputForm has an onSubmit function that creates and sends a message. It uses UserContext to access the current username and the prop chatName to access the current room name.
 
-MessageBox only maps props.messages to \<\li> tags.
+MessageBox only maps props.messages to \<li> tags.
 
 #### Login
 
