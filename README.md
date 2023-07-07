@@ -140,7 +140,7 @@ useState - [user, setUser] provides user data the UserContext so that other comp
 
 useState - [loggedIn, setLoggedIn] handles what view App should render.
 
-For information about custom hooks see the **[hooks](#hooks-and-server-communication)** section
+For information about custom hooks see the **[hooks section](#hooks-and-server-communication)**
 
 #### Chat
 
