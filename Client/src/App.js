@@ -8,7 +8,6 @@ import { useMessages } from "./hooks/useMessages.js";
 import { useChatRooms } from "./hooks/useChatRooms.js";
 import { useOpenChatRoom } from "./hooks/useOpenChatRoom.js";
 
-
 //store information about the logged in user.
 
 // TODO: maybe move this to some other file.

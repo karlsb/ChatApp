@@ -6,6 +6,13 @@ A small web based chat application built with javascript
 
 This project consists of two parts: One client written in React and one server written in nodejs using the frameworks expressjs and socket.io
 
+## Overview
+
+![image](./images/LoginPage.png)
+![image](./images/LoginUserNotExist.png)
+![image](./images/CreateAccount.png)
+![image](./images/MainView.png)
+![image](./images/Chat.png)
 # Built with
 
 - [React](https://react.dev/)
