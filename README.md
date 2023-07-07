@@ -21,18 +21,22 @@ ______________
 You can create a new user in the create account view.
 
 ![image](./images/CreateAccount.png)
+______________
 
 After the user logged in or created a new user the main view is displayed
 
 ![image](./images/MainView.png)
+______________
 
 On the left side of the main view you can create, join and leave rooms, searching for rooms is not yet implemented.
 
 ![image](./images/SelectChatRoom.png)
+______________
 
 Once the user joins a room a chat is displayed. In the chat you can type messages and see messages from other users who also joined the same room.
 
 ![image](./images/Chat.png)
+______________
 
 That concludes a short overview of the application. For implementation details see [Implementation Details](#imlpementation-details)
 # Built with
