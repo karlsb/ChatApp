@@ -126,10 +126,10 @@ Data from hooks
 
 *View*
 
-&nbsp; Chat is a wrapper of 2 components
-- MessageBox, MessageInputForm. 
+The chat covers the biggest part of the application view and provides a view of messages for a chat room and the ability to type your own message.
 
-the chat covers the biggest part of the application view and provides a view of messages for a chat room and the ability to type your own message.
+The Chat component has two child components:
+- MessageBox, MessageInputForm. 
 
 MessageBox displays all the messages in a related to a chatroom on the server.
 
@@ -137,9 +137,9 @@ MessageInputForm is a form where the user can type and submit their chat message
 
 *Functionality*
 
-The Chat component uses the messages context provided by the App component. This Message context gives access to all the messages for a specific room, and this context is the data dispalyed in MessageBox.
+The Chat component uses MessageContext provided by the App component. MessageContext gives access to all the messages for a specific room, which are dispalyed in MessageBox.
 
-MessageInputForm contains an onSubmit function and uses the userContext to create a message with the current user. And takes the prop chatName to set the room to the message.
+MessageInputForm has an onSubmit function that creates and sends a message. It uses UserContext to access the current username and the prop chatName to access the current room name.
 
 MessageBox only maps props.messages to \<\li> tags.
 
