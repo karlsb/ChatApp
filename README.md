@@ -2,12 +2,12 @@
 
 
 
-## About
+# About
 
 This project consists of two parts: One client written in React and one server written in nodejs using the frameworks expressjs and socket.io
 
 
-## Built with
+# Built with
 - React.js
 - Node.js
 - Socket.io
@@ -15,7 +15,7 @@ This project consists of two parts: One client written in React and one server w
 - chai.js (testing framework)
 
 
-## Getting Started
+# Getting Started
 ```bash
 npm install 
 ```
@@ -23,18 +23,17 @@ npm install
 ./run.sh
 ```
 
-## Description 
-### API
+# Description 
+## API
 
 The API is build with Node.js and uses the tools express.js and socket.io
 
 express is used to run a web server while i use socket io to define socket communication methods.
 
 behind the API is a simple data storage written in javascript.
-#### Methods
+### Methods
 
-The naming convention "___ callback" was developed due to two different styles of methods where one used a callback from the caller, and one did not. 
-later most of the non-callback methods where depricated and removed.
+
 
 - login
 - create user
@@ -46,17 +45,21 @@ later most of the non-callback methods where depricated and removed.
 - leave room callback
 - get rooms
 - disconnect
-### Data storage
+
+*The naming convention "___ callback" was developed due to two different styles of methods where one used a callback from the caller, and one did not. 
+later most of the non-callback methods where depricated and removed.*
+
+## Data storage
 - I use simple in memory data on the server. 
 -   chatRooms and messages are stored in Key-value data-structures, e.i objects.
 -   Users are stored in an array.
 -   I made a few custom methods to insert, get, delete for each data storage. 
 
 - Next time i build something similar i would want to use a typed language, because a lot of time was spend on debugging for correct types.
-### Client
+## Client
 The client is built with React.js and create-react-app. 
 
-#### Components
+### Components
 - App
 - chat
     - Chat
