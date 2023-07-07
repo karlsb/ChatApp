@@ -207,8 +207,7 @@ I use socket.io client socket to communicate with my API.
 - useOpenChatRoom
 
 
-**useChatRooms**
-Handles creating new rooms and fetching existing rooms from the server.
+**useChatRooms** - Handles creating new rooms and fetching existing rooms from the server.
 
 *socket emits*
 - create room callback
@@ -217,15 +216,13 @@ Handles creating new rooms and fetching existing rooms from the server.
 *client socket events*
 - recieve room callback
 
-**useJoinChatRoom**
-Handles a user leaving and joining a room
+**useJoinChatRoom** - Handles a user leaving and joining a room
 
 *socket emits*
 - join room callback
 - leave room callback
 
-**useMessages**
-handles sending messages to the server and recieving broadcasted messages from the server.
+**useMessages** - Handles sending messages to the server and recieving broadcasted messages from the server.
 
 *socket emits*
 - send message callback
@@ -233,8 +230,7 @@ handles sending messages to the server and recieving broadcasted messages from t
 *client socket events*
 - recieve message
 
-**useOpenChatRoom**
-handles fetching messages froma certain for a user. --- hook name misleading, should consider changing it to something like "useFetchRoomMessages".
+**useOpenChatRoom** - Handles fetching messages froma certain for a user. --- hook name misleading, should consider changing it to something like "useFetchRoomMessages".
 
 *socket emits*
 - open room callback 
