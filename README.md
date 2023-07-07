@@ -9,11 +9,11 @@ This project consists of two parts: One client written in React and one server w
 ## Application overview
 
 The user first reach a login view where you can type in a username
-
+______________
 ![image](./images/LoginPage.png)
 
 if the user tries to log in with a username that doesn't exist a message is displayed 
-
+______________
 ![image](./images/LoginUserNotExist.png)
 
 You can create a new user in the create account view.
