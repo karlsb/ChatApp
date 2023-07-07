@@ -80,75 +80,103 @@ later most of the non-callback methods where depricated and removed.*
 The client is built with React.js and create-react-app. 
 
 ### Components
-- **App**
+- **[App](#App)**
 
-- **chat**
-    - **Chat**
-    - **Message**
-    - **MessageBox**
-    - **MessageInputForm**
+- **[chat](#Chat)**
+    - MessageBox
+        - Message
+    - MessageInputForm
     
-- **login**
+- **[login](#Login)**
     - Login
     - LoginForm
-- roomList
+
+- **[roomList](#RoomList)**
     - Room
     - RoomList
-- modal
+
+- **[modal](#Modal)**
     - Modal
-- onlineList (Not yet implemented)
+
+- **[onlineList](#OnlineList)** (Not yet implemented)
 
 #### App
 
-*Data from hooks*
+This is the top layer of the application (appart from index.js that wraps my app in a reactDom renderer).
+
+*View*
+
+The app layout covers the whole browser view which is depend on if a user is logged in or not.
+if a user is logged in the view is devided into 3 sections: RoomList, Chat, OnlineList
+if a user is not logged in the view is: Login
+
+*functionality*
+
+App contain UserContext and MessageContext, so that components throughout the application can access the context data.
+App also holds a set of hooks that handles the server commnication. It sends the hook functions down to child components based on needs.
+
+Data from hooks
 - chatRooms
 - user
 - messages
 - loggedIn
 - openChatRoom 
 
-This is the top layer of the application (appart from index.js that wraps my app in a reactDom renderer).
-
-*functionality*
-App contain UserContext and MessageContext, so that components throughout the application can access the context data.
-App also holds a set of hooks that handles the server commnication. It sends the hook functions down to child components based on needs.
+#### Chat
 
 *View*
-The app layout covers the whole browser view which is depend on if a user is logged in or not.
-if a user is logged in the view is devided into 3 sections: RoomList, Chat, OnlineList
-if a user is not logged in the view is: Login
 
-**Chat**
-The chat consists of the 4 components Chat, Message, MessageBox, MessageInputForm. 
+&nbsp; Chat is a wrapper of 2 components
+- MessageBox, MessageInputForm. 
 
-the Chat component wraps the MessageBox and MessageInputForm. It provides message data from the MessageContext to the MessageBox and a sendMessage function to the MessageInputForm.
+the chat covers the biggest part of the application view and provides a view of messages for a chat room and the ability to type your own message.
 
-**RoomList**
+MessageBox displays all the messages in a related to a chatroom on the server.
+
+MessageInputForm is a form where the user can type and submit their chat message.
+
+*Functionality*
+
+The Chat component uses the messages context provided by the App component. This Message context gives access to all the messages for a specific room, and this context is the data dispalyed in MessageBox.
+
+MessageInputForm contains an onSubmit function and uses the userContext to create a message with the current user. And takes the prop chatName to set the room to the message.
+
+MessageBox only maps props.messages to \<\li> tags.
+
+#### Login
+
+
+*View*
+
+The login view covers the whole browser view and is the first view the user sees. The user is prompted to login or create a user.
+
+The login view is has an input field and a login button.
+
+*Functionality*
+
+The LoginFrom component handles user Login and a user Creation through its login/create button. The input-field data is grabbed and sent to the server for a login or create user attempt. If login is called and the user doesn't exists an error message is displayed in the UI. same for if an existing user tries to be created.
+
+**Socket Events**
+- login
+- create user
+
+Both user login and user creation emits events on the client socket which are recived by the server socket. The events are "login" and "create user"
+
+#### RoomList
 
 *View*
 - A Create Room button that can open a Modal component
 - A list of all the chat rooms.
 
 *Functionality*
+
 The room lists handles Opening and cosing the Modal component and provides a function onCreateChatRoom to the Modal. onCreateChatRoom calls the createChatRoom hook with the current users username and an room name input from modal.
 
-**OnlineList**
+#### OnlineList
 
 Not yet implemented
 
 Just contains some basic html to cover up an area of the browser 
-
-**Login**
-
-Socket Events
-- login
-- create user
-
-The login view is has an input field and a login button. The button fires the LogIn function provided by the parent component App.
-
-The LoginFrom component handles 2 things: A user Login and a user Creation.
-
-Both user login and user creation emits events on the client socket which are recived by the server socket. The events are "login" and "create user"
 
 #### Hooks and server communication
 I use socket.io client socket to communicate with my API.
