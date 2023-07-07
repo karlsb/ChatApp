@@ -1,29 +1,50 @@
 # Chat App
-
+A small web based chat application built with javascript
 
 
 # About
 
 This project consists of two parts: One client written in React and one server written in nodejs using the frameworks expressjs and socket.io
 
-
 # Built with
-- [React.js](https://react.dev/)
-- Node.js
-- Socket.io
-- Tailwind.css
-- chai.js (testing framework)
 
+- [React](https://react.dev/)
+- [Node.js](https://nodejs.org/en)
+- [Express.js](https://expressjs.com/)
+- [Socket.io](https://socket.io/)
+- [Tailwind.css](https://tailwindcss.com/)
+- [chai.js](https://www.chaijs.com/)
 
 # Getting Started
+
+Use a linux computer
+Install Node.js v18.16.0+ installed.
+Clone the repo with your prefered method.
+
 ```bash
 npm install 
 ```
+after npm install you might get warnings from npm audit
+run:
+```bash
+npm audit fix
+```
+You may still see warnings, but it should be possible to run the app in on localhost.
+if you ran npm audit fix --force you might have broken some dependencies, so the app might not run.
+
+to see if the weaknesses are only in devDependencies run:
+```bash
+npm audit -production
+```
+configure the file run.sh to contain the correct path to the project (see instructions in run.sh)
+
+Start the app by executing run.sh (you may have to use chmod +x on the run.sh file):
 ```bash
 ./run.sh
 ```
 
-# Description 
+# Detailed Description Of The Application
+
 ## API
 
 The API is build with Node.js and uses the tools express.js and socket.io
@@ -31,9 +52,8 @@ The API is build with Node.js and uses the tools express.js and socket.io
 express is used to run a web server while i use socket io to define socket communication methods.
 
 behind the API is a simple data storage written in javascript.
+
 ### Methods
-
-
 
 - login
 - create user
@@ -60,13 +80,15 @@ later most of the non-callback methods where depricated and removed.*
 The client is built with React.js and create-react-app. 
 
 ### Components
-- App
-- chat
-    - Chat
-    - Message
-    - MessageBox
-    - MessageInputForm
-- login
+- **App**
+
+- **chat**
+    - **Chat**
+    - **Message**
+    - **MessageBox**
+    - **MessageInputForm**
+    
+- **login**
     - Login
     - LoginForm
 - roomList
@@ -76,7 +98,7 @@ The client is built with React.js and create-react-app.
     - Modal
 - onlineList (Not yet implemented)
 
-**App**
+#### App
 
 *Data from hooks*
 - chatRooms
