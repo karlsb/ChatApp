@@ -9,20 +9,27 @@ This project consists of two parts: One client written in React and one server w
 ## Application overview
 
 The user first reach a login view where you can type in a username
+
 ![image](./images/LoginPage.png)
 
 if the user tries to log in with a username that doesn't exist a message is displayed 
+
 ![image](./images/LoginUserNotExist.png)
+
 You can create a new user in the create account view.
+
 ![image](./images/CreateAccount.png)
 
 After the user logged in or created a new user the main view is displayed
+
 ![image](./images/MainView.png)
 
 On the left side of the main view you can create, join and leave rooms, searching for rooms is not yet implemented.
+
 ![image](./images/SelectChatRoom.png)
 
 Once the user joins a room a chat is displayed. In the chat you can type messages and see messages from other users who also joined the same room.
+
 ![image](./images/Chat.png)
 
 That concludes a short overview of the application. For implementation details see [Implementation Details](#imlpementation-details)
