@@ -230,7 +230,7 @@ I use socket.io client socket to communicate with my API.
 *client socket events*
 - recieve message
 
-**useOpenChatRoom** - Handles fetching messages froma certain for a user. --- hook name misleading, should consider changing it to something like "useFetchRoomMessages".
+**useOpenChatRoom** - Handles fetching messages froma certain for a user.
 
 *socket emits*
 - open room callback 
