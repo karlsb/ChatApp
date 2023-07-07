@@ -8,7 +8,7 @@ This project consists of two parts: One client written in React and one server w
 
 
 # Built with
-- React.js
+- [React.js](https://react.dev/)
 - Node.js
 - Socket.io
 - Tailwind.css
