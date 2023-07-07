@@ -7,14 +7,16 @@ A small web based chat application built with javascript
 This project consists of two parts: One client written in React and one server written in nodejs using the frameworks expressjs and socket.io
 
 ## Application overview
-
-The user first reach a login view where you can type in a username
 ______________
+The user first reach a login view where you can type in a username
+
 ![image](./images/LoginPage.png)
+______________
 
 if the user tries to log in with a username that doesn't exist a message is displayed 
-______________
+
 ![image](./images/LoginUserNotExist.png)
+______________
 
 You can create a new user in the create account view.
 
