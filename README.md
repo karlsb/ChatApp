@@ -1,10 +1,70 @@
 # Chat App
-A small web based chat application built with javascript
+A web based chat application built with JavaScript
 
 
-# About
+## Features
 
-This project consists of two parts: One client written in React and one server written in nodejs using the frameworks expressjs and socket.io
+This project consists a client written in React and a server written in Node.js using expressjs and socket.io
+
+- Open new chat rooms.
+- Join and leave chat rooms.
+- Send and recieves messages in the chat.
+- User creation and login.
+
+## Installation & Running Locally
+
+### Prerequisites
+
+[Node.js](https://nodejs.org/en) v18.16.0+ or higher.
+[Git](https://git-scm.com/downloads)
+
+
+### Setup
+
+```bash
+
+# Clone the repository
+
+git clone https://github.com/karlsb/ChatApp.git
+
+# Navigate to project directory
+cd ChatApp
+
+```
+
+### Install Dependencies
+
+```bash
+npm install 
+```
+
+after npm install you might get warnings from npm audit
+run:
+
+```bash
+npm audit fix
+```
+
+You may still see warnings, but it should be possible to run the app on localhost.
+if you ran npm audit fix --force you may break some dependencies, which will prevent the app from running.
+
+to see if the weaknesses are only in devDependencies run:
+
+```bash
+npm audit --omit=dev
+```
+
+### Run Frontend
+
+```bash
+cd Client && npm start
+```
+
+### Run Backend 
+
+```bash
+cd Server && node index.js 
+```
 
 ## Application overview
 ______________
@@ -39,7 +99,7 @@ Once the user joins a room a chat is displayed. In the chat you can type message
 ______________
 
 That concludes a short overview of the application. For implementation details see [Implementation Details](#imlpementation-details)
-# Built with
+## Tech Stack
 
 - [React](https://react.dev/)
 - [Node.js](https://nodejs.org/en)
@@ -48,35 +108,7 @@ That concludes a short overview of the application. For implementation details s
 - [Tailwind.css](https://tailwindcss.com/)
 - [chai.js](https://www.chaijs.com/)
 
-# Getting Started
-
-Use a linux computer
-Install Node.js v18.16.0+ installed.
-Clone the repo with your prefered method.
-
-```bash
-npm install 
-```
-after npm install you might get warnings from npm audit
-run:
-```bash
-npm audit fix
-```
-You may still see warnings, but it should be possible to run the app in on localhost.
-if you ran npm audit fix --force you might have broken some dependencies, so the app might not run.
-
-to see if the weaknesses are only in devDependencies run:
-```bash
-npm audit --omit=dev
-```
-configure the file run.sh to contain the correct path to the project (see instructions in run.sh)
-
-Start the app by executing run.sh (you may have to use chmod +x on the run.sh file):
-```bash
-./run.sh
-```
-
-# Implementation Details
+## Implementation Details
 
 ## API
 
@@ -228,8 +260,6 @@ The room lists handles Opening and cosing the Modal component and provides a fun
 #### OnlineList
 
 Not yet implemented
-
-Just contains some basic html to cover up an area of the browser 
 
 ### Hooks and server communication
 I use socket.io client socket to communicate with my API.
